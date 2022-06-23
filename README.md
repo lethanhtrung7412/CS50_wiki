@@ -15,4 +15,6 @@ By having one Markdown file represent each encyclopedia entry, we can make our e
 
 # Run code
 1. Download this repo
-2. Move to the project directory,
+2. Move to the project directory
+3. Run this command in terminal `pip install -r requirements.txt`
+4. Run `python manage.py runserver`
