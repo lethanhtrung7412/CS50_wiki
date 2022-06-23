@@ -1,0 +1,21 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+Create
+{% endblock %}
+
+
+{% block body %}
+<h4>Create new page</h4>
+
+<h5 style="color: red">{{ error }}</h5>
+<p>Please note that we uses <a
+        href="https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">Github
+        Markdown</a> to style its pages, which is converted to HTML when entries are requested by a user.</p>
+<form action="{% url 'create' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <br />
+    <button type="submit">Create</button>
+</form>
+{% endblock %}
